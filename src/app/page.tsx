@@ -122,8 +122,8 @@ export default function HomePage() {
         </div>
 
         {/* Wave divider */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style={{ display: "block", height: 60 }}>
+        <div className="absolute bottom-0 left-0 right-0" style={{ lineHeight: 0 }}>
+          <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: 60, maxWidth: "none" }}>
             <path d="M0,40 C360,70 1080,10 1440,40 L1440,60 L0,60 Z" fill="#FAFAF8"/>
           </svg>
         </div>

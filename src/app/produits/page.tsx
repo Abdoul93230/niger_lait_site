@@ -54,7 +54,7 @@ function ProduitsContent() {
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style={{ display: "block", height: 48 }}>
+          <svg viewBox="0 0 1440 48" preserveAspectRatio="none" style={{ display: "block", width: "100%", height: 48, maxWidth: "none" }}>
             <path d="M0,32 C480,52 960,12 1440,32 L1440,48 L0,48 Z" fill="#FAFAF8"/>
           </svg>
         </div>
