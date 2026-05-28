@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { ArrowRight, Search, X } from "lucide-react";
@@ -7,7 +7,7 @@ import { products, categories } from "@/lib/data";
 import { ProductPhoto } from "@/components/ProductImage";
 import TiltCard from "@/components/TiltCard";
 
-export default function ProduitsPage() {
+function ProduitsContent() {
   const searchParams = useSearchParams();
   const [activeCategory, setActiveCategory] = useState(() => {
     const cat = searchParams.get("cat");
@@ -198,5 +198,13 @@ export default function ProduitsPage() {
         </div>
       </section>
     </div>
+  );
+}
+
+export default function ProduitsPage() {
+  return (
+    <Suspense fallback={<div style={{ paddingTop: 72, minHeight: "60vh" }} />}>
+      <ProduitsContent />
+    </Suspense>
   );
 }
